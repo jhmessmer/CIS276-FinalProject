@@ -27,6 +27,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    height: 50px;
   }
   
   /* Change color on hover */
@@ -36,4 +37,9 @@
   }
   body {
     background-color: lightgray;
+  }
+
+  img {
+    width: 40px;
+    height: 30px;
   }
