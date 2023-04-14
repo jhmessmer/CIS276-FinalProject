@@ -1,0 +1,10 @@
+#contact-instructions{
+    text-align: center;
+}
+form{
+    text-align: center;
+    padding: 10px;
+}
+textarea{
+    resize: none;
+}
