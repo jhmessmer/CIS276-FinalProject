@@ -43,3 +43,12 @@
     width: 40px;
     height: 30px;
   }
+
+  .gatorade-image-home {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: fit-content;
+  }
+  
