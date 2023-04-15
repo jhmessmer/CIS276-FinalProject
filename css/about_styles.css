@@ -14,4 +14,20 @@ table, th, td {
     margin-right: auto;
   }
 
-  
+  body{
+    font-family:'Quicksand', sans-serif;
+    text-align:center;
+    line-height:1.5em;
+   background: #69d2e7;
+  background: -moz-linear-gradient(-45deg, #69d2e7 0%, #a7dbd8 25%, #e0e4cc 46%, #e0e4cc 54%, #f38630 75%, #fa6900 100%);
+  background: -webkit-linear-gradient(-45deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
+  background: linear-gradient(135deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d2e7', endColorstr='#fa6900',GradientType=1 );
+  }
+
+  #gatorade-landing{
+    
+   width: fit-content;
+   height: fit-content;
+
+  }
