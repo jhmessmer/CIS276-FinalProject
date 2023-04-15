@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product (Cart)</title>
     <link rel="stylesheet" href="/css/navbar_styles.css">
+    <link rel="stylesheet" href="/css/products_styles.css">
+
 </head>
 <body>
 
@@ -20,5 +22,119 @@
     <a href="contact.html">Contact</a>
     <a href="login.html">Login</a>
 </div>
-</body>
+
+
+<main>
+    <div class="container"> 
+   <h1>Gatorade Products Store</h1>
+   <p>Add products to your shopping cart</p>
+   <div id="alerts"></div>
+<div class="productcont">
+        <div class="product">
+            <h3 class="productname">Product 1</h3>
+            <img src="/images/gatorade-frost.jpg" alt="gatorade-1" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 2</h3>
+            <img src="/images/gatorade-green.webp" alt="gatorade-2" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$8.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 3</h3>
+            <img src="/images/gatorade-orange.webp" alt="gatorade-3" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <br>
+        <br>
+        <div class="product">
+            <h3 class="productname">Product 4</h3>
+            <img src="/images/gatorade-purple.webp" alt="gatorade-4" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 5</h3>
+            <img src="/images/gatorade-red.jpeg" alt="gatorade-5" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 6</h3>
+            <img src="/images/gatorade-white.webp" alt="gatorade-6" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 7</h3>
+            <img src="/images/gatorade-why-protein.webp" alt="gatorade-7" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 8</h3>
+            <img src="/images/gatordae_blue.png" alt="gatorade-8" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 9</h3>
+            <img src="/images/gatorade-shirt.jpg" alt="gatorade-9" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Product 10</h3>
+            <img src="/images/gatorade-fit.avif" alt="gatorade-2" class="product-img">
+            <p>Product description excerpt...</p>
+            <p class="price">$5.05</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <button id="checkout">Checkout</button>
+          </div>
+        </div>
+</div>
+ </main>
+    <script  src="/js/functions.js"></script> 
+  </body>
 </html>
