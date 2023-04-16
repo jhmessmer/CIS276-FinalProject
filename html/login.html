@@ -23,13 +23,13 @@
 </div>
 <h1>Login</h1>
 <div class="login-form">
-    <form>
+    <form action="/html/success.html" method="POST">
         <label for="email">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="username" required><br>
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" placeholder="password" required><br>
 
-        <button type="button">Login</button>
+        <button id="log-in">Log-in</button>
         <button onclick="ReturnHome()" type="button">Return to Home</button>
       </form>
 </div>
@@ -73,3 +73,26 @@
 <br>
 </body>
 </html>
+<script type="text/javascript">
+    window.onload = ()=>{
+        this.sessionStorage.setItem("username", "admin");
+        this.sessionStorage.setItem("password", "admin");
+    }
+    var input = document.getElementsByTagName('input');
+    var login = document.getElementById('log-in');
+    var form = document.querySelector('form');
+    form.onsubmit = ()=>{return false}
+
+    login.onclick = ()=>{
+        if((input[0].value != "") && (input[1].value != ""))
+        {
+            if ((input[0].value == this.sessionStorage.getItem("username")) && (input[1].value == this.sessionStorage.getItem("password")))
+            {
+                //form.onsubmit = ()=>{return 1}
+                window.location.assign("success.html");
+                alert("LOGIN SUCCESS");
+            }
+
+        }
+    }
+</script>
