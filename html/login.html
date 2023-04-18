@@ -22,16 +22,19 @@
     <a href="login.html">Login</a>
 </div>
 <h1>Login</h1>
-<div class="login-form">
     <form action="/html/success.html" method="POST">
-        <label for="email">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="username" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="password" required><br>
-
+        <div>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="username"><br>
+            <span></span>
+        </div>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="password"><br>
+            <span></span><br><br>
+        </div>
         <button id="log-in">Log-in</button>
       </form>
-</div>
 <h3>Don't have an account?</h3>
 <p>Create one here.</p>
 <br>
@@ -87,11 +90,53 @@
         {
             if ((input[0].value == this.sessionStorage.getItem("username")) && (input[1].value == this.sessionStorage.getItem("password")))
             {
-                //form.onsubmit = ()=>{return 1}
+                form.onsubmit = ()=>{return 1}
                 window.location.assign("success.html");
                 alert("LOGIN SUCCESS");
             }
+            else
+		 	 {
+		 	 	if ((input[0].value != sessionStorage.getItem('username')) )
+			 	 {
+                    //alert('wrong username')
+                    input[0].nextElementSibling.textContent = "Username NOT match";
+					setTimeout(()=>{
+						input[0].nextElementSibling.textContent = "";
+					}, 2000);
 
-        }
-    }
+			 	 }
+			 	 if ((input[1].value != sessionStorage.getItem('password')) )
+			 	 {
+                    alert('wrong password')
+			 	 	input[1].nextElementSibling.textContent = "Password NOT match";
+					setTimeout(()=>{
+						input[1].nextElementSibling.textContent = "";
+					}, 2000);
+
+			 	 }
+
+		 	 }
+
+		 }
+		else
+		 {
+			if (input[0].value == "")
+			{
+                alert('username is empty')
+				input[0].nextElementSibling.textContent = "Username is empty";
+				setTimeout(()=>{
+					input[0].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+			if (input[1].value == "")
+			{
+                alert('password is empty')
+				input[1].nextElementSibling.textContent = "Password is empty";
+				setTimeout(()=>{
+					input[1].nextElementSibling.textContent = "";
+				}, 2000);
+			}
+		 }
+	}
 </script>
+

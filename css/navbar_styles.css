@@ -36,7 +36,10 @@
     background-color: #ddd;
     color: black;
   }
-  body{
+
+  
+  
+   body{
     font-family:'Quicksand', sans-serif;
     text-align:center;
     line-height:1.5em;
@@ -46,6 +49,8 @@
   background: linear-gradient(135deg, #69d2e7 0%,#a7dbd8 25%,#e0e4cc 46%,#e0e4cc 54%,#f38630 75%,#fa6900 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d2e7', endColorstr='#fa6900',GradientType=1 );
   }
+  
+ 
 
   img {
     width: 40px;
