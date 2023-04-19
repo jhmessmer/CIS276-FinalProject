@@ -24,16 +24,16 @@
 <h1>Login</h1>
     <form action="/html/success.html" method="POST">
         <div>
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" placeholder="username"><br>
-            <span></span>
-        </div>
-        <div>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="password"><br>
-            <span></span><br><br>
-        </div>
-        <button id="log-in">Log-in</button>
+			<label for="username">Username</label>
+			<input type="text" name="username" placeholder="Username">
+			<span></span>
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" placeholder="Password">
+			<span></span>
+		</div>
+		<button id="log-in">Log-in</button>
       </form>
 <h3>Don't have an account?</h3>
 <p>Create one here.</p>
@@ -77,29 +77,30 @@
 </html>
 <script type="text/javascript">
     window.onload = ()=>{
-        this.sessionStorage.setItem("username", "admin");
-        this.sessionStorage.setItem("password", "admin");
-    }
-    var input = document.getElementsByTagName('input');
-    var login = document.getElementById('log-in');
-    var form = document.querySelector('form');
-    form.onsubmit = ()=>{return false}
+		this.sessionStorage.setItem('username', 'admin');
+		this.sessionStorage.setItem('password', 'admin');
+	}
+	
+	var input = document.getElementsByTagName('input');
+	var login = document.getElementById('log-in');
+	var form = document.querySelector('form');
+	form.onsubmit = ()=>{return false;}
 
-    login.onclick = ()=>{
-        if((input[0].value != "") && (input[1].value != ""))
-        {
-            if ((input[0].value == this.sessionStorage.getItem("username")) && (input[1].value == this.sessionStorage.getItem("password")))
-            {
-                form.onsubmit = ()=>{return 1}
-                window.location.assign("success.html");
-                alert("LOGIN SUCCESS");
-            }
-            else
+	login.onclick = ()=>{
+
+		if ((input[0].value != "") && (input[1].value != ""))
+		 {
+		 	if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password')))
+		 	 {
+		 	 	form.onsubmit = ()=>{return 1;}
+				  document.cookie = "username="+input[0].value;
+				  document.cookie = "password="+input[1].value;
+		 	 }
+		 	 else
 		 	 {
 		 	 	if ((input[0].value != sessionStorage.getItem('username')) )
 			 	 {
-                    //alert('wrong username')
-                    input[0].nextElementSibling.textContent = "Username NOT match";
+			 	 	input[0].nextElementSibling.textContent = "Username NOT match";
 					setTimeout(()=>{
 						input[0].nextElementSibling.textContent = "";
 					}, 2000);
@@ -107,7 +108,6 @@
 			 	 }
 			 	 if ((input[1].value != sessionStorage.getItem('password')) )
 			 	 {
-                    alert('wrong password')
 			 	 	input[1].nextElementSibling.textContent = "Password NOT match";
 					setTimeout(()=>{
 						input[1].nextElementSibling.textContent = "";
@@ -122,7 +122,6 @@
 		 {
 			if (input[0].value == "")
 			{
-                alert('username is empty')
 				input[0].nextElementSibling.textContent = "Username is empty";
 				setTimeout(()=>{
 					input[0].nextElementSibling.textContent = "";
@@ -130,7 +129,6 @@
 			}
 			if (input[1].value == "")
 			{
-                alert('password is empty')
 				input[1].nextElementSibling.textContent = "Password is empty";
 				setTimeout(()=>{
 					input[1].nextElementSibling.textContent = "";
@@ -138,5 +136,7 @@
 			}
 		 }
 	}
+
+
 </script>
 
